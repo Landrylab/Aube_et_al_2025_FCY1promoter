@@ -1,0 +1,15 @@
+#conda create -n FCY1prom_final numpy==1.19.5 pandas==1.1.5 statsmodels==0.12.2 biopython matplotlib seaborn
+
+conda create -n FCY1prom_final pandas==1.1.5 statsmodels==0.12.2 numpy scipy biopython matplotlib seaborn scikit-learn
+
+conda activate FCY1prom_final
+
+#pip install scipy==1.5.4
+
+conda install ipykernel
+
+ipython kernel install --user --name=FCY1prom
+
+pip list --format=freeze > 'C:\Users\tiger\OneDrive - Université Laval\PhD\Jupyter_notebooks\FCY1_2025_FINAL\requirements_FCY1prom.txt'
+
+conda deactivate
