@@ -1,0 +1,17 @@
+# Creating the Python virtual environment to analyse the AVITI 300 paired-end sequencing run
+cd /project/chlandry/users/siaub8
+mkdir venv_FCY1_300
+
+module load python/3.11
+module load vsearch/2.13.6
+module load pandaseq
+module load emboss/6.5.7
+ 
+virtualenv --no-download venv_FCY1_300
+
+source venv_FCY1_300/bin/activate
+pip install --no-index --upgrade pip
+pip install numpy pandas scipy statsmodels matplotlib seaborn upsetplot
+
+pip freeze --local > requirements_FCY1_300.txt
+deactivate
