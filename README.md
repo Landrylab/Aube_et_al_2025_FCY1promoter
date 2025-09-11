@@ -10,41 +10,41 @@ The second one contains all jupyter notebooks which were run locally to perform 
 ## A) Reads_analysis
 
 ### Common dependencies
-* create_venv_FCY1_300.txt -- Command lines which were used to create the virtual environment within which all Python script from this section were run
-* requirements_FCY1_300.txt -- Requirement file listing the version of Python modules loaded within this virtual environment
-* Mut_call_func.py -- Custom Python functions which are called within the different analysis scripts
+* create_venv_FCY1_300.txt -- Command lines which were used to create the virtual environment within which all Python script from this section were run.
+* requirements_FCY1_300.txt -- Requirement file listing the version of Python modules loaded within this virtual environment.
+* Mut_call_func.py -- Custom Python functions which are called within the different analysis scripts.
 
 ### A1) Bulk competition
 
 #### For preparation (performed locally before setting up the analysis pipeline on the server)
-* Libs_info_format.py -- Short script used to reformat the names of 150 paired-end sequencing libraries
-* generations_prep.py -- Short script to compute total and (OD-based) reference-based generations for each sampling timepoint of each replicate culture
+* Libs_info_format.py -- Short script used to reformat the names of 150 paired-end sequencing libraries.
+* generations_prep.py -- Short script to compute total and (OD-based) reference-based generations for each sampling timepoint of each replicate culture.
 
 #### For analysis of sequencing data
 * Reads_analysis.py -- Main Python script to compute selection coefficients for all single-nucleotide variants from sequencing data. This script is designed to be run on one series of sequencing libraries (all timepoints T0 to T3 of the same culture).
-* compile_s_data.py -- Short script to compile selection coefficients obtained from many cultures into a single file
-* compile_mut_freqs.py -- Sort script to compile WT-relative frequencies (for each variant) obtained from many cultures into a single file
+* compile_s_data.py -- Short script to compile selection coefficients obtained from many cultures into a single file.
+* compile_mut_freqs.py -- Sort script to compile WT-relative frequencies (for each variant) obtained from many cultures into a single file.
 
 #### To run the above analysis across all samples (exact command lines used)
-* job_FCY1_300_final_25-04-07.bash -- To run Reads_analysis.py on all samples of the 300 paired-end sequencing run
+* job_FCY1_300_final_25-04-07.bash -- To run Reads_analysis.py on all samples of the 300 paired-end sequencing run.
 * job_FCY1_150_F3F4_25-04-07.bash -- To run Reads_analysis.py on all F3F4 (promoter) sequencing libraries from the 150 paired-end sequencing run.
 * job_FCY1_150_CDS_PD_25-04-07.bash -- To run Reads_analysis.py on all CDS (FCY1) sequencing libraries from the 150 paired-end sequencing run. This only includes a subset of cultures, in which a set of previously characterized FCY1 mutations had been added as controls.
-* compile_FCY1_300_25-04-08.bash -- To compile selection coefficients (compile_s_data.py) from the 300 paired-end run in one single file
-* compile_FCY1_150_F3F4_25-04-08.bash -- To compile selection coefficients (compile_s_data.py) from the 150 paired-end F3F4 run in one single file 
-* compile_FCY1_150_CDS_PD_25-04-08.bash -- To compile selection coefficients (compile_s_data.py) from the 150 paired-end CDS run in one single file
-* freqs_FCY1_300_25-04-08.bash -- To compile WT-relative mutant frequencies (compile_mut_freqs.py) from the 300 paired-end run in one single file
-* freqs_FCY1_150_F3F4_25-04-08.bash -- To compile WT-relative mutant frequencies (compile_mut_freqs.py) from the 150 paired-end F3F4 run in one single file
-* freqs_FCY1_150_CDS_PD_25-04-08.bash -- To compile WT-relative mutant frequencies (compile_mut_freqs.py) from the 150 paired-end CDS run in one single file
+* compile_FCY1_300_25-04-08.bash -- To compile selection coefficients (compile_s_data.py) from the 300 paired-end run in one single file.
+* compile_FCY1_150_F3F4_25-04-08.bash -- To compile selection coefficients (compile_s_data.py) from the 150 paired-end F3F4 run in one single file.
+* compile_FCY1_150_CDS_PD_25-04-08.bash -- To compile selection coefficients (compile_s_data.py) from the 150 paired-end CDS run in one single file.
+* freqs_FCY1_300_25-04-08.bash -- To compile WT-relative mutant frequencies (compile_mut_freqs.py) from the 300 paired-end run in one single file.
+* freqs_FCY1_150_F3F4_25-04-08.bash -- To compile WT-relative mutant frequencies (compile_mut_freqs.py) from the 150 paired-end F3F4 run in one single file.
+* freqs_FCY1_150_CDS_PD_25-04-08.bash -- To compile WT-relative mutant frequencies (compile_mut_freqs.py) from the 150 paired-end CDS run in one single file.
 
 ### A2) Sort-seq
 
 #### For analysis of sequencing data
-* Mut_calling.py -- Main Python scripts, which computed read counts for all genotypes within each sequencing sample (bins from FACS)
-* compile_reads.py -- Short Python script used to combined all counts into a single file
+* Mut_calling.py -- Main Python scripts, which computed read counts for all genotypes within each sequencing sample (bins from FACS).
+* compile_reads.py -- Short Python script used to combined all counts into a single file.
 
 #### To run the above analysis across all samples (exact command lines used)
-* job_SortSeq_25-02-18.bash -- To run Mut_calling.py on all sequencing libraries from the sort-seq experiment (300 paired-end)
-* compile_sort_25-02-18.bash -- To compile per-bin read counts of genotypes (compile_reads.py) across all sequencing libraries
+* job_SortSeq_25-02-18.bash -- To run Mut_calling.py on all sequencing libraries from the sort-seq experiment (300 paired-end).
+* compile_sort_25-02-18.bash -- To compile per-bin read counts of genotypes (compile_reads.py) across all sequencing libraries.
 
 ## B) Data_analysis
 The different notebooks are listed in the order that they should be executed. Main, Extended Data and Supplementary Figures from the manuscript are listed in parenthesis next to the notebook where they are generated.
