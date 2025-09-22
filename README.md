@@ -70,4 +70,5 @@ All paths within these analysis notebooks are relative, such that the content of
 15. **S3Fig.ipynb** (Supplementary Fig 3) -- Generation of Supplementary Fig 3 from the manuscript.
 16. **S5Fig.ipynb** (Supplementary Fig 4) -- Generation of Supplementary Fig 4 from the manuscript.
 17. **S7S8Figs.ipynb** (Supplementary Figs 6,7) -- Generation of Supplementary Figs 6 and 7 from the manuscript.
-18. **FCY1_CSM_selection.ipynb** (Extended Data Fig 2) -- Script which was used to choose codon positions from the FCY1 DMS (Després et al., 2022) to include as controls in the bulk competition experiment.
+18. **Gating_flow_cytometry.ipynb** (Supplementary Figs 11,12) -- Generation of supplementary figures displaying gating strategies used for FACS and flow cytometry experiments. 
+19. **FCY1_CSM_selection.ipynb** (Extended Data Fig 2) -- Script which was used to choose codon positions from the FCY1 DMS (Després et al., 2022) to include as controls in the bulk competition experiment.
