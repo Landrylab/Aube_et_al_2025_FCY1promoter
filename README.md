@@ -5,7 +5,7 @@ The repository is split into two levels: 1) Reads_analysis and 2)Data_analysis.
 The first one contains the scripts which were used to obtain read counts and/or selection coefficients from raw sequencing data. This was performed on a server.
 The second one contains all jupyter notebooks which were run locally to perform additional data analysis and generate figures used in the manuscript.
 
-**All data files necessary to run the scripts are provided in the corresponding Zenodo repository (https://doi.org/10.5281/zenodo.17088129), also split in "Reads_analysis" and "Data_analysis".**
+**All data files necessary to run the scripts are provided in the corresponding Zenodo repository (https://doi.org/10.5281/zenodo.17088128), also split in "Reads_analysis" and "Data_analysis".**
 
 ## A) Reads_analysis
 
