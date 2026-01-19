@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -D /project/chlandry/users/siaub8
-#SBATCH -J FCY1_300_final_array
-#SBATCH -o Logs_FCY1_25-04-07/FCY1_300_final-%j.log
+#SBATCH -J FCY1_150_F3F4_array
+#SBATCH -o Logs_FCY1_25-12-23/FCY1_F3F4_150-%j.log
 #SBATCH -c 1
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=simon.aube.2@ulaval.ca
@@ -17,4 +17,4 @@ module load emboss/6.5.7
 
 source /project/chlandry/users/siaub8/venv_FCY1_300/bin/activate
 
-/project/chlandry/users/siaub8/Reads_analysis.py --id $SLURM_ARRAY_TASK_ID --in /project/chlandry/users/siaub8/FC_300_SA --ref ref_F3F4_300_trimmed.fa --pre FCY1 --nested True --info Libs_info_300.csv --min_len 310 --max_len 345 --out FCY1_300_final_25-04-07
+/project/chlandry/users/siaub8/Reads_analysis.py --id $SLURM_ARRAY_TASK_ID --in /project/chlandry/users/siaub8/LANC016/Raw_modified/F3F4_libs --ref ref_F3F4_150_trimmed.fa --pre F3F4 --info Libs_info_150_final.csv --min_len 160 --max_len 190 --out FCY1_150_F3F4_25-12-23 --min_reads 125
