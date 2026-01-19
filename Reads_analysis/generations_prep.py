@@ -16,11 +16,10 @@ gen_df['T3_to_tot'] = np.log2(gen_df['T3_OD'] / 0.01)
 gen_df['T3_gen_tot'] = gen_df['T3_to_tot'] + gen_df['T2_gen_tot']
 
 # Computing reference-based generations
-# For 12 uM 5-FC, a growth rate of 0.178904 h^-1 is used (median measurements for AKD1123 in these conditions (Fig5)
-# For the controls without 5-FC, we can consider a WT growth rate of 0,36 h^-1 (Does it even matter?)
-# From this, the WT generation times are computed
-gen_time_5FC = np.log(2) / 0.178904
-gen_time_No_5FC = np.log(2) / 0.36
+# This uses growth rates measured in SC and SC+5-FC for CRISPR reconstructions of the WT genotype 
+# (see FCY1_fit_function_with_valid.ipynb)
+gen_time_5FC = np.log(2) / 0.2861341791294445
+gen_time_No_5FC = np.log(2) / 0.4253546305551834
 
 # Splitting the dataframe
 no_5FC_subset = gen_df[gen_df['Library'] <= 11].copy().reset_index(drop=True)
